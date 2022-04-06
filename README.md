@@ -5,12 +5,12 @@
 1. Install MongoDB on your enviroment 
 
 2. Setup for .env variables
-> **Setup values on /asset/config/.env_template and rename into `.env`**
-> **PORT** - use your favorite Node.js API port.
-> **SENDGRID_API_KEY** - register an account at [SendGrid](https://sendgrid.com/) and setup an API key 
-> **SG_SENDER** - at SendGrid registered email address for API communication  **should not be your _SendGrid login address_**
-> **MONGOOSE_URL** - path to the MongoDB *on local installation* `mongodb://127.0.0.1:27017/<DB_DOCUMENT>`
-> **JWT_SECRET** - your personal passphase to salt the JWT token
+ **Setup values on /asset/config/.env_template and rename into `.env`**
+ **PORT** - use your favorite Node.js API port.
+ **SENDGRID_API_KEY** - register an account at [SendGrid](https://sendgrid.com/) and setup an API key 
+ **SG_SENDER** - at SendGrid registered email address for API communication  **should not be your _SendGrid login address_**
+ **MONGOOSE_URL** - path to the MongoDB *on local installation* `mongodb://127.0.0.1:27017/<DB_DOCUMENT>`
+ **JWT_SECRET** - your personal passphase to salt the JWT token
 
 # TaskManager Frontend
 

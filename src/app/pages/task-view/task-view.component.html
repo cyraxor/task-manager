@@ -1,0 +1,35 @@
+<div class="centered-content">
+  <div class="menu-bar has-background-light">
+    <h1 class="title has-text-primary">Task List</h1>
+    <div class="logout-button">
+      <button class="button is-small is-danger is-outlined is-rounded" (click)="onLogoutButtonClicked()">Logout</button>
+    </div>
+  </div>
+  <div class="task-manager-container">
+    <div class="sidebar has-background-white">
+      <h1 class="title has-text-primary">Lists</h1>
+      <div class="list-menu">
+        <a class="list-menu-item" *ngFor="let list of lists" [routerLink]="['/lists', list._id]" (dblclick)="onEditClick(list)" routerLinkActive="is-active">
+          <p>{{ list.title }}</p>
+        </a>
+      </div>
+      <button class="button is-primary has-text-white" routerLink="/new-list">+ New List</button>
+    </div>
+    <div class="task-list-container has-background-light">
+      <div *ngIf="tasks">
+        <h1 class="title has-text-primary">Tasks</h1>
+        <!-- Task Elements -->
+        <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{ 'completed':task.completed }">
+          <p>{{ task.title }}</p>
+        </div>
+        <h3 class="empty-state-text is-4" *ngIf="tasks.length === 0">There are no tasks here! Click Add button</h3>
+        <button class="circle-add-button button is-primary" routerLink="./new-task">
+          <img src="../../../assets/plus-icon.svg" class="has-text-white">
+        </button>
+      </div>
+      <div *ngIf="!tasks">
+        <h3 class="empty-state-text is-4"> Please select a list from the sidebar</h3>
+      </div>
+    </div>
+  </div>
+</div>
