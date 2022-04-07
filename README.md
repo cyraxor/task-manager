@@ -5,7 +5,7 @@
 1. Install MongoDB on your enviroment 
 
 2. Setup for .env variables
- **Setup values on /asset/config/.env_template and rename into `.env`**
+ **Setup values on [./config/.env_template](https://github.com/cyraxor/task-manager/blob/main/config/.env_template) and rename into `.env`**
  
  **PORT** - use your favorite Node.js API port.
  
@@ -48,5 +48,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # Run in development mode 
 
 Install **nodemon** local to the project `npm i nodemon` or globally `sudo npm i -g nodemon` if you want to use it with other Node.js projects
+
 Run **Node.js API server** in development mode with `npm run dev-api` from project root folder
+
 Run **complete MEAN stack server** in development mode with `npm run dev` from project root folder
